@@ -1,0 +1,25 @@
+# spring.application.name 설정을 주석 해제하여 사용
+spring.application.name: board1
+debug: true  # debug 모드 활성화
+
+# server 포트 설정
+server:
+  port: 8080
+
+# 데이터베이스 연결 설정
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver  # MySQL 8 이상에 해당하는 드라이버
+    url: jdbc:mysql://localhost:3306/db_codingrecipe?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: user_codingrecipe
+    password: 1234
+
+# MyBatis 설정
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  # 매퍼 파일 경로 확인
+  config-location: classpath:mybatis-config.xml  # MyBatis 설정 파일 경로 확인
+
+
+#logging:
+  #level:
+   # root: TRACE  # 전체 로그를 TRACE 레벨로 설정
