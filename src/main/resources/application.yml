@@ -9,17 +9,16 @@ server:
 # 데이터베이스 연결 설정
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver  # MySQL 8 이상에 해당하는 드라이버
-    url: jdbc:mysql://localhost:3306/db_codingrecipe?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-    username: user_codingrecipe
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_codingrecipe1?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: user_codingrecipe1
     password: 1234
-
 # MyBatis 설정
 mybatis:
-  mapper-locations: classpath:mapper/*.xml  # 매퍼 파일 경로 확인
-  config-location: classpath:mybatis-config.xml  # MyBatis 설정 파일 경로 확인
+  mapper-locations: classpath:**/*.xml
+  config-location: classpath:mybatis-config.xml
+  type-aliases-package: com.codingrecipe1.board1.domain
 
-
-#logging:
-  #level:
-   # root: TRACE  # 전체 로그를 TRACE 레벨로 설정
+    #logging:
+    #level:
+  # root: TRACE  # 전체 로그를 TRACE 레벨로 설정
